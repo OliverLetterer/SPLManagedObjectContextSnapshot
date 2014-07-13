@@ -38,7 +38,7 @@
     self.snapshot = nil;
 }
 
-- (void)testThatSnapshotTracksInsertions
+- (void)testThatSnapshotTracksInsertionsWithoutUpdates
 {
     SPLEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([SPLEntity class])
                                                       inManagedObjectContext:self.context];
@@ -56,6 +56,22 @@
     SPLManagedObjectChange *change = self.snapshot.insertions.firstObject;
     expect(change.type).to.equal(SPLManagedObjectChangeTypeInsertion);
     expect(change.initialAttributes).to.equal(initialAttributes);
+}
+
+- (void)testThatSnapshotDoesNotTrackDeletedInsertions
+{
+    SPLEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([SPLEntity class])
+                                                      inManagedObjectContext:self.context];
+    entity.stringValue = @"foo";
+    entity.numberValue = @5;
+
+    [self.context save:NULL];
+
+    [self.context deleteObject:entity];
+    [self.context save:NULL];
+
+    expect(self.snapshot.insertions).to.haveCountOf(0);
+    expect(self.snapshot.deletions).to.haveCountOf(0);
 }
 
 @end

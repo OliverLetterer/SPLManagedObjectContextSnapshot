@@ -1,5 +1,7 @@
 reference: http://www.objc.io/issue-6/travis-ci.html
 language: objective-c
 cache: bundler
+before_install:
+    - gem install xcpretty
 script:
 - xcodebuild -workspace Example/SPLManagedObjectContextSnapshot.xcworkspace -scheme SPLManagedObjectContextSnapshot test -sdk iphonesimulator | xcpretty -c; exit ${PIPESTATUS[0]}
