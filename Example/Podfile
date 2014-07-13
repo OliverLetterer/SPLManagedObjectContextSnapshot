@@ -1,9 +1,6 @@
-target 'SPLManagedObjectContextSnapshot', :exclusive => true do
-  pod "SPLManagedObjectContextSnapshot", :path => "../"
-end
+pod "SPLManagedObjectContextSnapshot", :path => "../"
 
 target 'Tests', :exclusive => true do
-  pod "SPLManagedObjectContextSnapshot", :path => "../"
   pod 'Expecta'
   pod 'SLCoreDataStack', '~> 0.6'
 end

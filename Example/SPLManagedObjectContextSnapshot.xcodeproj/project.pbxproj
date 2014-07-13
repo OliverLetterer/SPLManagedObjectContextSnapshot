@@ -22,11 +22,12 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		67B69421D1F644059D40AFAE /* libPods-SPLManagedObjectContextSnapshot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE17D53AD354919AA1A98E6 /* libPods-SPLManagedObjectContextSnapshot.a */; };
-		A759B44519726928000D8EB4 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44419726928000D8EB4 /* Tests.m */; };
+		A759B44519726928000D8EB4 /* SPLManagedObjectContextSnapshotTestsFromMainContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44419726928000D8EB4 /* SPLManagedObjectContextSnapshotTestsFromMainContext.m */; };
 		A759B44819726A1B000D8EB4 /* DataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A759B44619726A1B000D8EB4 /* DataStore.xcdatamodeld */; };
 		A759B44B19726A49000D8EB4 /* SPLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44A19726A49000D8EB4 /* SPLEntity.m */; };
 		A759B44E19726A8F000D8EB4 /* SPLDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44D19726A8F000D8EB4 /* SPLDataStore.m */; };
+		A7BFEE7B19728A3500C47A10 /* SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BFEE7A19728A3500C47A10 /* SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m */; };
+		EC76FDA333D649B5A48700D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E33039650BC44F9D877382DA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA8FC3BA16045D3BB7D3103 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		2BC34DB2C56948CF912E2C76 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
-		43950981E33447B58180E8DC /* Pods-SPLManagedObjectContextSnapshot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SPLManagedObjectContextSnapshot.xcconfig"; path = "Pods/Pods-SPLManagedObjectContextSnapshot.xcconfig"; sourceTree = "<group>"; };
 		5A1F4F3BFC2F436BA6668025 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SPLManagedObjectContextSnapshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPLManagedObjectContextSnapshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,13 +86,15 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		7C335BB09ACF462296CCE2D1 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A759B44419726928000D8EB4 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		A759B44419726928000D8EB4 /* SPLManagedObjectContextSnapshotTestsFromMainContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLManagedObjectContextSnapshotTestsFromMainContext.m; sourceTree = "<group>"; };
 		A759B44719726A1B000D8EB4 /* DataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStore.xcdatamodel; sourceTree = "<group>"; };
 		A759B44919726A49000D8EB4 /* SPLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLEntity.h; sourceTree = "<group>"; };
 		A759B44A19726A49000D8EB4 /* SPLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLEntity.m; sourceTree = "<group>"; };
 		A759B44C19726A8F000D8EB4 /* SPLDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLDataStore.h; sourceTree = "<group>"; };
 		A759B44D19726A8F000D8EB4 /* SPLDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLDataStore.m; sourceTree = "<group>"; };
+		A7BFEE7A19728A3500C47A10 /* SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m; sourceTree = "<group>"; };
 		CAD5E3E5BBD64387BB93AF34 /* SPLManagedObjectContextSnapshot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SPLManagedObjectContextSnapshot.podspec; path = ../SPLManagedObjectContextSnapshot.podspec; sourceTree = "<group>"; };
+		E33039650BC44F9D877382DA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E376DDC144C04B0CA20458DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FCE17D53AD354919AA1A98E6 /* libPods-SPLManagedObjectContextSnapshot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPLManagedObjectContextSnapshot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,7 +107,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				67B69421D1F644059D40AFAE /* libPods-SPLManagedObjectContextSnapshot.a in Frameworks */,
+				EC76FDA333D649B5A48700D8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,8 +133,8 @@
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
-				43950981E33447B58180E8DC /* Pods-SPLManagedObjectContextSnapshot.xcconfig */,
 				2BC34DB2C56948CF912E2C76 /* Pods-Tests.xcconfig */,
+				0DA8FC3BA16045D3BB7D3103 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +156,7 @@
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				FCE17D53AD354919AA1A98E6 /* libPods-SPLManagedObjectContextSnapshot.a */,
 				7C335BB09ACF462296CCE2D1 /* libPods-Tests.a */,
+				E33039650BC44F9D877382DA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +194,8 @@
 				A759B44D19726A8F000D8EB4 /* SPLDataStore.m */,
 				A759B44919726A49000D8EB4 /* SPLEntity.h */,
 				A759B44A19726A49000D8EB4 /* SPLEntity.m */,
-				A759B44419726928000D8EB4 /* Tests.m */,
+				A759B44419726928000D8EB4 /* SPLManagedObjectContextSnapshotTestsFromMainContext.m */,
+				A7BFEE7A19728A3500C47A10 /* SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m */,
 				A759B44619726A1B000D8EB4 /* DataStore.xcdatamodeld */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
@@ -331,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-SPLManagedObjectContextSnapshot-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		955592CC0CEF4DF9A9B61DEA /* Check Pods Manifest.lock */ = {
@@ -396,8 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A759B44519726928000D8EB4 /* Tests.m in Sources */,
+				A759B44519726928000D8EB4 /* SPLManagedObjectContextSnapshotTestsFromMainContext.m in Sources */,
 				A759B44819726A1B000D8EB4 /* DataStore.xcdatamodeld in Sources */,
+				A7BFEE7B19728A3500C47A10 /* SPLManagedObjectContextSnapshotTestsFromBackgroundContext.m in Sources */,
 				A759B44B19726A49000D8EB4 /* SPLEntity.m in Sources */,
 				A759B44E19726A8F000D8EB4 /* SPLDataStore.m in Sources */,
 			);
@@ -498,6 +504,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -530,6 +537,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -538,7 +546,7 @@
 		};
 		6003F5C0195388D20070C39A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43950981E33447B58180E8DC /* Pods-SPLManagedObjectContextSnapshot.xcconfig */;
+			baseConfigurationReference = 0DA8FC3BA16045D3BB7D3103 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -552,7 +560,7 @@
 		};
 		6003F5C1195388D20070C39A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43950981E33447B58180E8DC /* Pods-SPLManagedObjectContextSnapshot.xcconfig */;
+			baseConfigurationReference = 0DA8FC3BA16045D3BB7D3103 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
