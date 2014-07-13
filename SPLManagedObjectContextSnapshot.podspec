@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SPLManagedObjectContextSnapshot"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "Change tracking for a NSManagedObjectContext."
   s.homepage         = "https://github.com/OliverLetterer/SPLManagedObjectContextSnapshot"
   s.license          = 'MIT'
