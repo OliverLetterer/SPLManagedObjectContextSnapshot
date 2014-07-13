@@ -33,6 +33,8 @@ typedef NS_ENUM(NSInteger, SPLManagedObjectChangeType) {
 
 @interface SPLManagedObjectChange : NSObject
 
+@property (nonatomic, readonly) NSDate *timestamp;
+
 @property (nonatomic, readonly) NSString *entityName;
 @property (nonatomic, readonly) SPLManagedObjectChangeType type;
 

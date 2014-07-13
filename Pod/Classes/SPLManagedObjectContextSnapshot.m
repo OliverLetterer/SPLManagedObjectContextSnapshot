@@ -96,6 +96,8 @@
     if (self = [super init]) {
         _type = type;
 
+        _timestamp = [NSDate date];
+        
         _initialAttributes = @{};
         _changedAttributes = @{};
     }
