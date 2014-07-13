@@ -47,7 +47,15 @@
 
     [self.context save:NULL];
 
+    NSDictionary *initialAttributes = @{
+                                        @"stringValue": entity.stringValue,
+                                        @"numberValue": entity.numberValue,
+                                        };
+
     expect(self.snapshot.insertions).to.haveCountOf(1);
+    SPLManagedObjectChange *change = self.snapshot.insertions.firstObject;
+    expect(change.type).to.equal(SPLManagedObjectChangeTypeInsertion);
+    expect(change.initialAttributes).to.equal(initialAttributes);
 }
 
 @end

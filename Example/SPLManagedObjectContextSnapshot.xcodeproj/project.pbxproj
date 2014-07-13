@@ -22,8 +22,11 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		67B69421D1F644059D40AFAE /* libPods-SPLManagedObjectContextSnapshot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE17D53AD354919AA1A98E6 /* libPods-SPLManagedObjectContextSnapshot.a */; };
+		A759B44519726928000D8EB4 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44419726928000D8EB4 /* Tests.m */; };
+		A759B44819726A1B000D8EB4 /* DataStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A759B44619726A1B000D8EB4 /* DataStore.xcdatamodeld */; };
+		A759B44B19726A49000D8EB4 /* SPLEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44A19726A49000D8EB4 /* SPLEntity.m */; };
+		A759B44E19726A8F000D8EB4 /* SPLDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A759B44D19726A8F000D8EB4 /* SPLDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,20 @@
 			remoteInfo = SPLManagedObjectContextSnapshot;
 		};
 		A759B440197268E0000D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = SPLManagedObjectContextSnapshot;
+		};
+		A759B442197268E0000D8EB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = SPLManagedObjectContextSnapshot;
+		};
+		A759B44F19726E87000D8EB4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
@@ -66,9 +83,14 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		7C335BB09ACF462296CCE2D1 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A759B44419726928000D8EB4 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		A759B44719726A1B000D8EB4 /* DataStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataStore.xcdatamodel; sourceTree = "<group>"; };
+		A759B44919726A49000D8EB4 /* SPLEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLEntity.h; sourceTree = "<group>"; };
+		A759B44A19726A49000D8EB4 /* SPLEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLEntity.m; sourceTree = "<group>"; };
+		A759B44C19726A8F000D8EB4 /* SPLDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLDataStore.h; sourceTree = "<group>"; };
+		A759B44D19726A8F000D8EB4 /* SPLDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLDataStore.m; sourceTree = "<group>"; };
 		CAD5E3E5BBD64387BB93AF34 /* SPLManagedObjectContextSnapshot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SPLManagedObjectContextSnapshot.podspec; path = ../SPLManagedObjectContextSnapshot.podspec; sourceTree = "<group>"; };
 		E376DDC144C04B0CA20458DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FCE17D53AD354919AA1A98E6 /* libPods-SPLManagedObjectContextSnapshot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SPLManagedObjectContextSnapshot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,7 +186,12 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
+				A759B44C19726A8F000D8EB4 /* SPLDataStore.h */,
+				A759B44D19726A8F000D8EB4 /* SPLDataStore.m */,
+				A759B44919726A49000D8EB4 /* SPLEntity.h */,
+				A759B44A19726A49000D8EB4 /* SPLEntity.m */,
+				A759B44419726928000D8EB4 /* Tests.m */,
+				A759B44619726A1B000D8EB4 /* DataStore.xcdatamodeld */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
 			);
 			path = Tests;
@@ -227,6 +254,8 @@
 			dependencies = (
 				6003F5B4195388D20070C39A /* PBXTargetDependency */,
 				A759B441197268E0000D8EB4 /* PBXTargetDependency */,
+				A759B443197268E0000D8EB4 /* PBXTargetDependency */,
+				A759B45019726E87000D8EB4 /* PBXTargetDependency */,
 			);
 			name = Tests;
 			productName = SPLManagedObjectContextSnapshotTests;
@@ -367,7 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				A759B44519726928000D8EB4 /* Tests.m in Sources */,
+				A759B44819726A1B000D8EB4 /* DataStore.xcdatamodeld in Sources */,
+				A759B44B19726A49000D8EB4 /* SPLEntity.m in Sources */,
+				A759B44E19726A8F000D8EB4 /* SPLDataStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +415,16 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* SPLManagedObjectContextSnapshot */;
 			targetProxy = A759B440197268E0000D8EB4 /* PBXContainerItemProxy */;
+		};
+		A759B443197268E0000D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* SPLManagedObjectContextSnapshot */;
+			targetProxy = A759B442197268E0000D8EB4 /* PBXContainerItemProxy */;
+		};
+		A759B45019726E87000D8EB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* SPLManagedObjectContextSnapshot */;
+			targetProxy = A759B44F19726E87000D8EB4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,6 +569,7 @@
 			baseConfigurationReference = 2BC34DB2C56948CF912E2C76 /* Pods-Tests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPLManagedObjectContextSnapshot.app/SPLManagedObjectContextSnapshot";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -539,7 +582,9 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -550,6 +595,7 @@
 			baseConfigurationReference = 2BC34DB2C56948CF912E2C76 /* Pods-Tests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SPLManagedObjectContextSnapshot.app/SPLManagedObjectContextSnapshot";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -558,6 +604,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -595,6 +642,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A759B44619726A1B000D8EB4 /* DataStore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A759B44719726A1B000D8EB4 /* DataStore.xcdatamodel */,
+			);
+			currentVersion = A759B44719726A1B000D8EB4 /* DataStore.xcdatamodel */;
+			path = DataStore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6003F582195388D10070C39A /* Project object */;
 }
