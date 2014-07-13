@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.3.1)
+  - SLCoreDataStack (0.6.0)
+  - SPLManagedObjectContextSnapshot (0.1.0)
+
+DEPENDENCIES:
+  - Expecta
+  - SLCoreDataStack (~> 0.6)
+  - SPLManagedObjectContextSnapshot (from `../`)
+
+EXTERNAL SOURCES:
+  SPLManagedObjectContextSnapshot:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
+  SLCoreDataStack: 3cbb4bc9ea1f0ba6d7a3a382b1d0cf879b5f3cd4
+  SPLManagedObjectContextSnapshot: b922defc8b8a38c5747780e2faa16f2520648ea0
+
+COCOAPODS: 0.33.1
