@@ -1,0 +1,10 @@
+target 'SPLManagedObjectContextSnapshot', :exclusive => true do
+  pod "SPLManagedObjectContextSnapshot", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "SPLManagedObjectContextSnapshot", :path => "../"
+
+  pod 'Specta', '~> 0.2.1'
+  pod 'Expecta'
+end
