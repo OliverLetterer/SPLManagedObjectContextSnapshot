@@ -74,4 +74,72 @@
     expect(self.snapshot.deletions).to.haveCountOf(0);
 }
 
+- (void)testThatSnapshotTracksUpdatesOfInsertedObjects
+{
+    SPLEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([SPLEntity class])
+                                                      inManagedObjectContext:self.context];
+    entity.stringValue = @"foo";
+    entity.numberValue = @5;
+
+    [self.context save:NULL];
+
+    NSDictionary *initialAttributes = @{
+                                        @"stringValue": entity.stringValue,
+                                        @"numberValue": entity.numberValue,
+                                        };
+
+    self.snapshot = [[SPLManagedObjectContextSnapshot alloc] initWithManagedObjectContext:self.context];
+    entity.stringValue = @"bar";
+    entity.numberValue = @6;
+    [self.context save:NULL];
+
+    NSDictionary *changedAttributes = @{
+                                        @"stringValue": entity.stringValue,
+                                        @"numberValue": entity.numberValue,
+                                        };
+
+    expect(self.snapshot.insertions).to.haveCountOf(0);
+    expect(self.snapshot.changes).to.haveCountOf(1);
+
+    SPLManagedObjectChange *change = self.snapshot.changes.firstObject;
+    expect(change.type).to.equal(SPLManagedObjectChangeTypeUpdate);
+    expect(change.initialAttributes).to.equal(initialAttributes);
+    expect(change.changedAttributes).to.equal(changedAttributes);
+}
+
+- (void)testThatSnapshotOnlyTracksRealUpdatesOfInsertedObjects
+{
+    SPLEntity *entity = [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass([SPLEntity class])
+                                                      inManagedObjectContext:self.context];
+    entity.stringValue = @"foo";
+    entity.numberValue = @5;
+
+    [self.context save:NULL];
+
+    NSDictionary *initialAttributes = @{
+                                        @"stringValue": entity.stringValue,
+                                        @"numberValue": entity.numberValue,
+                                        };
+
+    self.snapshot = [[SPLManagedObjectContextSnapshot alloc] initWithManagedObjectContext:self.context];
+    entity.stringValue = @"bar";
+    entity.numberValue = @6;
+    [self.context save:NULL];
+
+    entity.numberValue = @5;
+    [self.context save:NULL];
+
+    NSDictionary *changedAttributes = @{
+                                        @"stringValue": entity.stringValue,
+                                        };
+
+    expect(self.snapshot.insertions).to.haveCountOf(0);
+    expect(self.snapshot.changes).to.haveCountOf(1);
+
+    SPLManagedObjectChange *change = self.snapshot.changes.firstObject;
+    expect(change.type).to.equal(SPLManagedObjectChangeTypeUpdate);
+    expect(change.initialAttributes).to.equal(initialAttributes);
+    expect(change.changedAttributes).to.equal(changedAttributes);
+}
+
 @end
