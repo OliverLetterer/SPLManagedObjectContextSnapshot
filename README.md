@@ -32,13 +32,11 @@ __Changes made on a different context and merged into the tracking context are i
 ## Usage
 
 Allocate a new instance of `SPLManagedObjectContextSnapshot`
-
 ```objc
 SPLManagedObjectContextSnapshot *snapshot = [[SPLManagedObjectContextSnapshot alloc] initWithManagedObjectContext:context];
 ```
 
 When You are done tracking, process changes through
-
 ```objc
 @interface SPLManagedObjectContextSnapshot : NSObject
 
