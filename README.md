@@ -5,11 +5,49 @@
 [![License](https://img.shields.io/cocoapods/l/SPLManagedObjectContextSnapshot.svg?style=flat)](http://cocoadocs.org/docsets/SPLManagedObjectContextSnapshot)
 [![Platform](https://img.shields.io/cocoapods/p/SPLManagedObjectContextSnapshot.svg?style=flat)](http://cocoadocs.org/docsets/SPLManagedObjectContextSnapshot)
 
+`SPLManagedObjectContextSnapshot` tracks changes made in a single `NSManagedObjectContext` in form of `SPLManagedObjectChange` instances:
+
+```objc
+typedef NS_ENUM(NSInteger, SPLManagedObjectChangeType) {
+    SPLManagedObjectChangeTypeInsertion,
+    SPLManagedObjectChangeTypeUpdate,
+    SPLManagedObjectChangeTypeDeletion
+};
+
+@interface SPLManagedObjectChange : NSObject
+
+@property (nonatomic, readonly) NSDate *timestamp;
+
+@property (nonatomic, readonly) NSString *entityName;
+@property (nonatomic, readonly) SPLManagedObjectChangeType type;
+
+@property (nonatomic, readonly) NSDictionary *initialAttributes;
+@property (nonatomic, readonly) NSDictionary *changedAttributes;
+
+@end
+```
+
+__Changes made on a different context and merged into the tracking context are ignored and counted against `SPLManagedObjectChange.initialAttributes`.__
+
 ## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+1. Allocate a new instance of `SPLManagedObjectContextSnapshot`:
 
-## Requirements
+```objc
+SPLManagedObjectContextSnapshot *snapshot = [[SPLManagedObjectContextSnapshot alloc] initWithManagedObjectContext:context];
+```
+
+2. When You are done tracking, process changes through
+
+```objc
+@interface SPLManagedObjectContextSnapshot : NSObject
+
+@property (nonatomic, readonly) NSArray *insertions;
+@property (nonatomic, readonly) NSArray *changes;
+@property (nonatomic, readonly) NSArray *deletions;
+
+@end
+```
 
 ## Installation
 
